@@ -1,0 +1,24 @@
+﻿@model VidMVC.ViewModel.CustomerCollectionViewModel
+@{
+    ViewBag.Title = "Collect";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1><b>Customers</b></h1>
+
+@if (Model.Customers.Count == 0)
+{
+    <p>There are no custumers currently</p>
+}
+else
+{
+    <table>
+       <tr><th> Customers Name</th></tr>
+        @foreach (var customer in Model.Customers)
+        {
+         <tr><td>@customer.Name</td></tr>
+        }
+    </table>
+
+}
+
