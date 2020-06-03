@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,25 +12,33 @@ namespace VidMVC.Controllers
 {
     public class CustomerController : Controller
     {
-        // GET: Customer
-        public ActionResult Collection()
+        private ApplicationDbContext _context;
+
+        public CustomerController()
         {
-            var customer = new List<Customer> {
-                new Customer{Name ="Jack Ma "},
-                new Customer{Name ="Elon Musk "}
-            };
+            _context = new ApplicationDbContext();
+        }
 
-            var CustomList = new CustomerCollectionViewModel
-            {
-                Customers = customer
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+        
+        public ViewResult Collection()
+        {
+            var customer = _context.Customers.ToList();
 
-            };
-            return View(CustomList);
+            return View(customer);
         }
         [Route("Customer/Collection/{Id}")]
-        public ActionResult ByCustomerId(int Id)
+        public ActionResult Details(int Id)
         {
-            return Content("Customer Id =" + Id);
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == Id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+           return Content(customer.Name);
         }
     }
 }

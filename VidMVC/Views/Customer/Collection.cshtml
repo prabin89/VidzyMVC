@@ -1,24 +1,22 @@
-﻿@model VidMVC.ViewModel.CustomerCollectionViewModel
+﻿@model  IEnumerable<VidMVC.Models.Customer>
 @{
     ViewBag.Title = "Collect";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1><b>Customers</b></h1>
+<table>
+    <thead>
+        <tr>Customers</tr>
+        <tr>Discount</tr>
 
-@if (Model.Customers.Count == 0)
-{
-    <p>There are no custumers currently</p>
-}
-else
-{
-    <table>
-       <tr><th> Customers Name</th></tr>
-        @foreach (var customer in Model.Customers)
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
         {
-         <tr><td>@customer.Name</td></tr>
+            <tr>
+                <td>@Html.ActionLink(customer.Name ,"Collection", "Customer",new { id = customer.Id },null)</td>
+            </tr>
         }
-    </table>
-
-}
-
+    </tbody>
+</table>

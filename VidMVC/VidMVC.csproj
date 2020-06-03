@@ -187,6 +187,30 @@
     <Compile Include="Migrations\202006021709358_AddMembershipType.Designer.cs">
       <DependentUpon>202006021709358_AddMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006030118551_PopulateMembershipTypeTable.cs" />
+    <Compile Include="Migrations\202006030118551_PopulateMembershipTypeTable.Designer.cs">
+      <DependentUpon>202006030118551_PopulateMembershipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030134349_ApplyAnnotationToCustomer.cs" />
+    <Compile Include="Migrations\202006030134349_ApplyAnnotationToCustomer.Designer.cs">
+      <DependentUpon>202006030134349_ApplyAnnotationToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030318585_AddDiscountRateInCustomerView.cs" />
+    <Compile Include="Migrations\202006030318585_AddDiscountRateInCustomerView.Designer.cs">
+      <DependentUpon>202006030318585_AddDiscountRateInCustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030321517_AddDiscountRateInCustomerView1.cs" />
+    <Compile Include="Migrations\202006030321517_AddDiscountRateInCustomerView1.Designer.cs">
+      <DependentUpon>202006030321517_AddDiscountRateInCustomerView1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030518403_AddMembershipTypeName.cs" />
+    <Compile Include="Migrations\202006030518403_AddMembershipTypeName.Designer.cs">
+      <DependentUpon>202006030518403_AddMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030633120_AddMembershipTypeName1.cs" />
+    <Compile Include="Migrations\202006030633120_AddMembershipTypeName1.Designer.cs">
+      <DependentUpon>202006030633120_AddMembershipTypeName1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -282,6 +306,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006021709358_AddMembershipType.resx">
       <DependentUpon>202006021709358_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030118551_PopulateMembershipTypeTable.resx">
+      <DependentUpon>202006030118551_PopulateMembershipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030134349_ApplyAnnotationToCustomer.resx">
+      <DependentUpon>202006030134349_ApplyAnnotationToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030318585_AddDiscountRateInCustomerView.resx">
+      <DependentUpon>202006030318585_AddDiscountRateInCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030321517_AddDiscountRateInCustomerView1.resx">
+      <DependentUpon>202006030321517_AddDiscountRateInCustomerView1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030518403_AddMembershipTypeName.resx">
+      <DependentUpon>202006030518403_AddMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030633120_AddMembershipTypeName1.resx">
+      <DependentUpon>202006030633120_AddMembershipTypeName1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
